@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <!--<color name="colorAccent">#FF4081</color>-->
+    <color name="primary">#607D8B</color>
+    <color name="primary_dark">#455A64</color>
+    <color name="primary_light">#CFD8DC</color>
+    <color name="accent">#9E9E9E</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+
+    <color name="gradeOne">#00a9ff</color>
+    <color name="gradeTwo">#88ff00</color>
+    <color name="gradeThree">#ff9400</color>
+    <color name="gradeFour">#ff0000</color>
+
+    <color name="sliderGradeOne">#aa00a9ff</color>
+    <color name="sliderGradeTwo">#aa88ff00</color>
+    <color name="sliderGradeThree">#aaff9400</color>
+    <color name="sliderGradeFour">#aaff0000</color>
+
+    <!--<color name="grade_one_first">#1E88E5</color> &lt;!&ndash; Blue 600 &ndash;&gt;-->
+    <!--<color name="grade_one_second">#1565C0</color> &lt;!&ndash; Blue 800 &ndash;&gt;-->
+    <color name="grade_one_first">#81D4FA</color> <!-- Light Blue 200 -->
+    <color name="grade_one_second">#64B5F6</color> <!-- Blue 400 -->
+    <color name="grade_two_first">#43A047</color> <!-- Green 600 -->
+    <color name="grade_two_second">#2E7D32</color> <!-- Green 800 -->
+    <color name="grade_three_first">#FFB300</color> <!-- Amber 600 -->
+    <color name="grade_three_second">#FF8F00</color> <!-- Amber 800 -->
+    <color name="grade_four_first">#F4511E</color> <!-- Deep Orange 600 -->
+    <color name="grade_four_second">#D84315</color> <!-- Deep Orange 800 -->
+
+    <color name="sliderValue">#ffffff</color>
+    <color name="line">#cccccc</color>
+
+    <color name="gradeColor">#000000</color>
+</resources>

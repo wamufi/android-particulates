@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/detail_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/detail_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/detail_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/detail_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/detail_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/detail_khai_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="63"
+                    android:textSize="80sp" />
+
+                <TextView
+                    android:id="@+id/detail_khai_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detail_khai_value"
+                    android:layout_marginEnd="4dp"
+                    android:text="통합대기지수"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/detail_khai_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/detail_khai_name"
+                    android:layout_marginStart="4dp"
+                    android:layout_toEndOf="@id/detail_khai_name"
+                    android:text="moderate"
+                    android:textSize="30sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/detail_pm10_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="미세먼지"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/detail_pm10_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detail_pm10_name"
+                    android:text="moderate"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/detail_pm10_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/detail_pm10_unit"
+                    android:text="63"
+                    android:textSize="35sp" />
+
+                <TextView
+                    android:id="@id/detail_pm10_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/detail_pm10_value"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="4dp"
+                    android:text="㎍/㎥" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/detail_pm25_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="초미세먼지"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/detail_pm25_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detail_pm25_name"
+                    android:text="moderate"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/detail_pm25_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/detail_pm25_unit"
+                    android:text="63"
+                    android:textSize="35sp" />
+
+                <TextView
+                    android:id="@id/detail_pm25_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/detail_pm25_value"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="4dp"
+                    android:text="㎍/㎥" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/detail_o3_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="오존"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/detail_o3_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detail_o3_name"
+                    android:text="moderate"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/detail_o3_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/detail_o3_unit"
+                    android:text="63"
+                    android:textSize="35sp" />
+
+                <TextView
+                    android:id="@id/detail_o3_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/detail_o3_value"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="4dp"
+                    android:text="ppm" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/detail_co_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="일산화탄소"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/detail_co_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detail_co_name"
+                    android:text="moderate"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/detail_co_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/detail_co_unit"
+                    android:text="63"
+                    android:textSize="35sp" />
+
+                <TextView
+                    android:id="@id/detail_co_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/detail_co_value"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="4dp"
+                    android:text="ppm" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/detail_so2_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="아황산가스"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/detail_so2_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detail_so2_name"
+                    android:text="moderate"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/detail_so2_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/detail_so2_unit"
+                    android:text="63"
+                    android:textSize="35sp" />
+
+                <TextView
+                    android:id="@id/detail_so2_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/detail_so2_value"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="4dp"
+                    android:text="ppm" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/detail_no2_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이산화질소"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/detail_no2_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detail_no2_name"
+                    android:text="moderate"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/detail_no2_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/detail_no2_unit"
+                    android:text="63"
+                    android:textSize="35sp" />
+
+                <TextView
+                    android:id="@id/detail_no2_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/detail_no2_value"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="4dp"
+                    android:text="ppm" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/detail_fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:visibility="gone"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+</RelativeLayout>
