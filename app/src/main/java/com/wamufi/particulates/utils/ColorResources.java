@@ -82,7 +82,7 @@ public class ColorResources extends Resources {
                 mSetGradeColor = getColor(R.color.gradeFour);
                 break;
             default:
-                mSetGradeColor = Color.BLACK;
+                mSetGradeColor = Color.WHITE;
                 break;
         }
     }
@@ -103,6 +103,7 @@ public class ColorResources extends Resources {
                 colors = new int[]{getColor(R.color.grade_four_first), getColor(R.color.grade_four_second)};
                 break;
             default:
+                colors = new int[]{getColor(R.color.primary_light), getColor(R.color.primary_dark)};
                 break;
         }
         return colors;

@@ -30,6 +30,7 @@ public class XmlParserUtil {
 
     /**
      * 측정소별 실시간 측정정보 조회
+     *
      * @param urlString
      * @return
      */
@@ -70,7 +71,7 @@ public class XmlParserUtil {
                         tagName = mXmlPullParser.getName();
                         if (isItemTag) {
                             if (tagName.equals("dataTime"))
-                                measureModel.setDateTime(text);
+                                measureModel.setDataTime(text);
                             else if (tagName.equals("so2Value"))
                                 measureModel.setSo2Value(text);
                             else if (tagName.equals("coValue"))
@@ -127,6 +128,7 @@ public class XmlParserUtil {
 
     /**
      * 근접측정소 목록 조회
+     *
      * @param urlString
      * @return
      */
@@ -194,6 +196,7 @@ public class XmlParserUtil {
 
     /**
      * TM 기준좌표 조회
+     *
      * @param urlString
      * @return
      */

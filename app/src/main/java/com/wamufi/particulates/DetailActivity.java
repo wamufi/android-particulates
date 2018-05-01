@@ -77,12 +77,13 @@ public class DetailActivity extends AppCompatActivity {
         }
     }
 
-//    private void initView() {
+    //    private void initView() {
     private void initView(boolean bSearch) {
 //        getSupportActionBar().setTitle(getIntent().getStringExtra("station_name"));
         getSupportActionBar().setTitle(mSearchName);
 
-        mColorResources.setColor(Integer.parseInt(mMeasureModel.getKhaiGrade()));
+//        System.out.println("!!! getKhaiGrade: " + Integer.parseInt(mMeasureModel.getKhaiGrade()));
+        mColorResources.setColor(mMeasureModel.getKhaiGrade());
 
 
         RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.detail_layout);
@@ -95,7 +96,7 @@ public class DetailActivity extends AppCompatActivity {
 //        searchText.setText(getIntent().getStringExtra("station_name"));
         searchText.setText(mStationName);
         TextView dateText = (TextView) findViewById(R.id.detail_date);
-        dateText.setText(mMeasureModel.getDateTime());
+        dateText.setText(mMeasureModel.getDataTime());
 
         TextView khaiValueText = (TextView) findViewById(R.id.detail_khai_value);
         khaiValueText.setText(mMeasureModel.getKhaiValue());
@@ -134,8 +135,8 @@ public class DetailActivity extends AppCompatActivity {
         no2GradeText.setText(gradeString.getString(mMeasureModel.getNo2Grade()));
 
         FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.detail_fab_add);
-        Log.v("DetailActivity", "mSearchName - "+mSearchName);
-        Log.v("DetailActivity", "bSearch - "+bSearch);
+        Log.v("DetailActivity", "mSearchName - " + mSearchName);
+        Log.v("DetailActivity", "bSearch - " + bSearch);
 
         if (bSearch) {
             floatingActionButton.setVisibility(View.VISIBLE);

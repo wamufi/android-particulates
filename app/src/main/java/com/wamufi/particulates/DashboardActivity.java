@@ -64,8 +64,6 @@ public class DashboardActivity extends AppCompatActivity {
     private LocationUtil mLocationUtil;
     private Location mLocation;
     private String mHereName;
-//    private String mSearchName = "";
-    private String mHereAddr;
 
     private ColorResources mColorResources;
 
@@ -247,8 +245,6 @@ public class DashboardActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(ArrayList<StationModel> stationModels) {
             mHereName = String.valueOf(stationModels.get(0).getStationName());
-            mHereAddr = String.valueOf(stationModels.get(0).getAddr());
-//            Log.v(TAG, "DownloadStationXml: mSearchName - " + mSearchName);
             Log.v(TAG, "DownloadStationXml: searchStationName - " + mHereName);
 //            if (!mSearchName.equals("")) {
 //                mDbManager.insertStation(mSearchName, String.valueOf(stationModels.get(0).getStationName()));
@@ -339,56 +335,45 @@ public class DashboardActivity extends AppCompatActivity {
 
             final MeasureModel item = measureModels.get(0);
             final String intentStationName;
-            final String intentStationAddr;
             final String intentUpdateTime;
             final String intentMeasureStationName;
 
             if (position == 0) { // 현위치
                 holder.stationText.setText(mHereName);
-                holder.updateText.setText(mHereAddr);
+                holder.updateText.setText(item.getDataTime());
                 intentStationName = mHereName;
                 intentMeasureStationName = mHereName;
 
-//                mColorResources.setColor(Integer.parseInt(item.getPm10Grade1h()));
                 mColorResources.setColor(item.getPm10Grade1h());
-//                holder.pm10Text.setTextColor(mColorResources.getColor(R.color.gradeColor));
                 holder.pm10Layout.setBackgroundColor(mColorResources.getColor(R.color.gradeColor));
                 holder.pm10Text.setText(item.getPm10Value());
                 holder.pm10Grade.setText(item.getPm10Grade1h());
-//                mColorResources.setColor(Integer.parseInt(item.getKhaiGrade()));
                 mColorResources.setColor(item.getKhaiGrade());
                 holder.khaiText.setTextColor(mColorResources.getColor(R.color.gradeColor));
                 holder.khaiText.setText(item.getKhaiValue());
                 if (!item.getPm25Value().equals("-")) {
                     holder.pm25Text.setText(item.getPm25Value());
                     holder.pm25Text.setTextColor(mColorResources.getColor(R.color.gradeColor));
-//                    mColorResources.setColor(Integer.parseInt(item.getPm25Grade()));
                     mColorResources.setColor(item.getPm25Grade());
                 }
             } else { // 검색된 위치
                 intentStationName = dbModels.get(position - 1).getSearchName();
-                intentStationAddr = dbModels.get(position - 1).getSearchAddr();
                 intentUpdateTime = dbModels.get(position - 1).getUpdateTime();
                 intentMeasureStationName = dbModels.get(position - 1).getStationName();
 
                 holder.stationText.setText(intentStationName);
-                holder.updateText.setText(intentUpdateTime);
-//                holder.stationText.setText(dbModels.get(position).getSearchName());
+                holder.updateText.setText(item.getDataTime());
 
-//                mColorResources.setColor(Integer.parseInt(item.getPm10Grade1h()));
                 mColorResources.setColor(item.getPm10Grade1h());
-//                holder.pm10Text.setTextColor(mColorResources.getColor(R.color.gradeColor));
                 holder.pm10Layout.setBackgroundColor(mColorResources.getColor(R.color.gradeColor));
                 holder.pm10Text.setText(item.getPm10Value());
                 holder.pm10Grade.setText(item.getPm10Grade1h());
-//                mColorResources.setColor(Integer.parseInt(item.getKhaiGrade()));
                 mColorResources.setColor(item.getKhaiGrade());
                 holder.khaiText.setTextColor(mColorResources.getColor(R.color.gradeColor));
                 holder.khaiText.setText(item.getKhaiValue());
                 if (!item.getPm25Value().equals("-")) {
                     holder.pm25Text.setText(item.getPm25Value());
                     holder.pm25Text.setTextColor(mColorResources.getColor(R.color.gradeColor));
-//                    mColorResources.setColor(Integer.parseInt(item.getPm25Grade()));
                     mColorResources.setColor(item.getPm25Grade());
                 }
             }

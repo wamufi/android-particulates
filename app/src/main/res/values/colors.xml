@@ -36,5 +36,5 @@
     <color name="sliderValue">#ffffff</color>
     <color name="line">#cccccc</color>
 
-    <color name="gradeColor">#000000</color>
+    <color name="gradeColor">#ffffff</color>
 </resources>

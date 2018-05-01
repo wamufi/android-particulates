@@ -45,8 +45,8 @@ public class XmlDownload {
 
         @Override
         protected void onPostExecute(ArrayList<MeasureModel> measureModels) {
-            Log.v(TAG, "get 0 " + String.valueOf(measureModels.get(0).getDateTime()));
-            Log.v(TAG, "get 1 " + String.valueOf(measureModels.get(1).getDateTime()));
+            Log.v(TAG, "get 0 " + String.valueOf(measureModels.get(0).getDataTime()));
+            Log.v(TAG, "get 1 " + String.valueOf(measureModels.get(1).getDataTime()));
         }
     }
 }

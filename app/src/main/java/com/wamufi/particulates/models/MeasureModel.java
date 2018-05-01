@@ -1,11 +1,14 @@
 package com.wamufi.particulates.models;
 
 import java.io.Serializable;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @SuppressWarnings("serial") //With this annotation we are going to hide compiler warnings
 public class MeasureModel implements Serializable {
 
-    private String dateTime;
+    private String dataTime;
     private String so2Value; // 아황산가스 농도
     private String coValue; // 일산화탄소 농도
     private String o3Value; // 오존 농도
@@ -28,12 +31,20 @@ public class MeasureModel implements Serializable {
         super();
     }
 
-    public String getDateTime() {
-        return dateTime;
+    public String getDataTime() {
+        try {
+            SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm");
+            dataTime = dataTime.substring(dataTime.indexOf(" "), dataTime.length());
+            Date date = timeFormat.parse(dataTime);
+            String timeOut = DateFormat.getTimeInstance(DateFormat.SHORT).format(date);
+            return timeOut;
+        } catch (Exception e) {
+            return dataTime;
+        }
     }
 
-    public void setDateTime(String dateTime) {
-        this.dateTime = dateTime;
+    public void setDataTime(String dataTime) {
+        this.dataTime = dataTime;
     }
 
     public String getSo2Value() {
